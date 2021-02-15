@@ -54,6 +54,7 @@ ROOT_URLCONF = 'admin_panel.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # 'DIRS': [],   # Adding templates path
         'DIRS': [str(BASE_DIR) + '/templates/', ],   # Adding templates path
         'APP_DIRS': True,
         'OPTIONS': {
