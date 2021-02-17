@@ -21,3 +21,11 @@ def profile(request):
 
 def basic_table(request):
     return render(request, 'pixel_admin/pixel_html/basic-table.html')
+
+
+def blank_page(request):
+    return render(request, 'pixel_admin/pixel_html/blank.html')
+
+
+def error_page(request):
+    return render(request, 'pixel_admin/pixel_html/404.html')

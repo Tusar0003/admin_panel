@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords"
-        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 4 admin, bootstrap 4, css3 dashboard, bootstrap 4 dashboard, severny admin bootstrap 4 dashboard, frontend, responsive bootstrap 4 admin template, pixel  design, pixel  dashboard bootstrap 4 dashboard template">
+        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 4 admin, bootstrap 4,
+        css3 dashboard, bootstrap 4 dashboard, severny admin bootstrap 4 dashboard, frontend,
+        responsive bootstrap 4 admin template, pixel  design, pixel  dashboard bootstrap 4 dashboard template">
     <meta name="description"
         content="Pixel Admin is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
@@ -49,9 +51,9 @@
             <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg "
                     href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i
                         class="fa fa-bars"></i></a>
-                <div class="top-left-part"><a class="logo" href="index.html"><b><img
-                                src="{% static 'plugins/images/pixeladmin-logo.png' %}" alt="home" /></b><span
-                            class="hidden-xs"><img src="{% static 'plugins/images/pixeladmin-text.png' %}" alt="home" /></span></a>
+                <div class="top-left-part"><a class="logo" href="{% url 'admin-home' %}"><b>
+                    <img src="{% static 'plugins/images/pixeladmin-logo.png' %}" alt="home" />
+                </b><span class="hidden-xs"><img src="{% static 'plugins/images/pixeladmin-text.png' %}" alt="home" /></span></a>
                 </div>
                 <ul class="nav navbar-top-links navbar-left m-l-20 hidden-xs">
                     <li>
@@ -99,11 +101,11 @@
                                 aria-hidden="true"></i><span class="hide-menu">Google Map</span></a>
                     </li>
                     <li>
-                        <a href="blank.html" class="waves-effect"><i class="fa fa-columns fa-fw"
+                        <a href="{% url 'admin-blank' %}" class="waves-effect"><i class="fa fa-columns fa-fw"
                                 aria-hidden="true"></i><span class="hide-menu">Blank Page</span></a>
                     </li>
                     <li>
-                        <a href="404.html" class="waves-effect"><i class="fa fa-info-circle fa-fw"
+                        <a href="{% url 'admin-error' %}" class="waves-effect"><i class="fa fa-info-circle fa-fw"
                                 aria-hidden="true"></i><span class="hide-menu">Error 404</span></a>
                     </li>
                 </ul>
