@@ -3,29 +3,24 @@ from django.http import HttpResponse
 from django.views.generic import TemplateView
 
 
-data = {
-    'userName': 'admin'
-}
+context = {'userName': 'admin'}
 
 
 def home(request):
-    context = {
-        'userName': 'admin'
-    }
     return render(request, 'pixel_admin/pixel_html/dashboard.html', context)
 
 
 def profile(request):
-    return render(request, 'pixel_admin/pixel_html/profile.html')
+    return render(request, 'pixel_admin/pixel_html/profile.html', context)
 
 
 def basic_table(request):
-    return render(request, 'pixel_admin/pixel_html/basic-table.html')
+    return render(request, 'pixel_admin/pixel_html/basic-table.html', context)
 
 
 def blank_page(request):
-    return render(request, 'pixel_admin/pixel_html/blank.html')
+    return render(request, 'pixel_admin/pixel_html/blank.html', context)
 
 
 def error_page(request):
-    return render(request, 'pixel_admin/pixel_html/404.html')
+    return render(request, 'pixel_admin/pixel_html/404.html', context)
